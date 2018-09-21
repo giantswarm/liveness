@@ -27,7 +27,7 @@ spec:
             topologyKey: "kubernetes.io/ip"
       containers:
       - name: {{ .Values.name }}
-        image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{if .Values.image.tag }}{{ .Values.image.tag }}{{else}}[[ .SHA ]]{{end}}"
         ports:
         - containerPort: 80
         livenessProbe:
