@@ -13,7 +13,3 @@ jobs:
     - run: ./architect build
 
     - run: ./architect deploy
-
-    - run:
-        name: Publish chart to stable channel
-        command: ./architect publish --stable
