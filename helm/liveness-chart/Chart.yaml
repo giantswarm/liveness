@@ -1,3 +1,3 @@
 name: liveness-chart
-appVersion: v1.0.0
-version: 1.0.0
+appVersion: v1.0.0-[[ .SHA ]]
+version: 1.0.0-[[ .SHA ]]
