@@ -1,0 +1,13 @@
+# Default values for liveness.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: liveness
+namespace: default
+
+replicas: 2
+
+image:
+  registry: quay.io
+  repository: giantswarm/liveness
+  tag: v.1.0.0
