@@ -12,6 +12,6 @@ spec:
     - '*'
     port:
       name: http
-      number: 30010
-      protocol: HTTP
+      number: {{ .Values.ingress.port }}
+      protocol: HTTP2
 {{ end }}

@@ -12,4 +12,7 @@ image:
   repository: giantswarm/liveness
   tag: null
 
+ingress:
+  port: 80
+
 istio: true
