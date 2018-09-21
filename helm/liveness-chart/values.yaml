@@ -10,6 +10,6 @@ replicas: 3
 image:
   registry: quay.io
   repository: giantswarm/liveness
-  tag: [[ .SHA ]]
+  tag: 1.0.0
 
 istio: true
