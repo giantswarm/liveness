@@ -43,4 +43,3 @@ spec:
           limits:
             cpu: 50m
             memory: 50Mi
-      serviceAccountName: {{ .Values.name }}

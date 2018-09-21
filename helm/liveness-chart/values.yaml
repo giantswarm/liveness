@@ -5,9 +5,11 @@
 name: liveness
 namespace: default
 
-replicas: 2
+replicas: 3
 
 image:
   registry: quay.io
   repository: giantswarm/liveness
   tag: v.1.0.0
+
+istio: true
