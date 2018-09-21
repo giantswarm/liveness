@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/giantswarm/micrologger"
+	yaml "gopkg.in/yaml.v2"
 )
 
 const (
@@ -18,7 +19,24 @@ const (
 	Port = "80"
 )
 
+var (
+	description = "Application run for health checking."
+	gitCommit   = "n/a"
+	name        = "liveness"
+	source      = "https://github.com/giantswarm/liveness"
+)
+
 func main() {
+	if (len(os.Args) > 1) && (os.Args[1] == "version") {
+		d, err := yaml.Marshal(newVersionResponse())
+		if err != nil {
+			panic(err)
+		}
+		fmt.Printf("%s", d)
+
+		return
+	}
+
 	var lHelp bool
 	var sHelp bool
 	flag.BoolVar(&lHelp, "help", false, "Print help usage.")
