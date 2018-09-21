@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Values.name }}
+    version: [[ .SHA ]]
     giantswarm.io/service-type: "managed"
 spec:
   replicas: {{ .Values.replicas }}
@@ -12,6 +13,7 @@ spec:
     metadata:
       labels:
         app: {{ .Values.name }}
+        version: [[ .SHA ]]
     spec:
       affinity:
         podAntiAffinity:
